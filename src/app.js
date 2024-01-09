@@ -9,6 +9,8 @@ const app = express();
 app.use(cors({
     origin: clientPort,
     credentials: true,
+    methods: 'GET, POST, PUT, DELETE, OPTIONS',
+    allowedHeaders: 'Content-Type, Authorization, access-control-allow-origin',
 }));
 // Config
 app.use(morgan('dev'));
